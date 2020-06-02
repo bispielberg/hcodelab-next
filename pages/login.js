@@ -21,7 +21,7 @@ export default function Login(){
 
     const handleFormSubmit = e =>{
         e.preventDefault()
-        axios.post('http://localhost:3333/auths', values)
+        axios.post('http://hcodelab-adonis.herokuapp.com/auths', values)
         .then(
             (res)=> {
                 const tokenData = res.data.token
@@ -65,7 +65,11 @@ export default function Login(){
                                     <a href="#">Esqueci a senha</a>
                                 </div>
                             </div>
-                            <p>Você ainda não tem conta, <a href="/register">clique aqui</a> e cadastre-se.</p>
+                            <p>Você ainda não tem conta, 
+                                <Link href="/register">
+                                <a title="Cadastre-se">clique aqui</a> 
+                                </Link>
+                                e cadastre-se.</p>
                         </form>
                     </section>
                 </main>
