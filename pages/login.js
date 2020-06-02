@@ -21,7 +21,7 @@ export default function Login(){
 
     const handleFormSubmit = e =>{
         e.preventDefault()
-        axios.post('https://hcodelab-adonis.herokuapp.com/auths',values)
+        axios.post('https://hcode-bispinho-adonis-server.herokuapp.com/auths',values)
         .then(
             (res)=> {
                 const tokenData = res.data.token

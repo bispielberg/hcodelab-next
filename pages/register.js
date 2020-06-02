@@ -19,7 +19,7 @@ export default function Login(){
     const handleFormSubmit = e =>{
         e.preventDefault()
 
-        axios.post(`https://hcodelab-adonis.herokuapp.com/users`, values)
+        axios.post(`https://hcode-bispinho-adonis-server.herokuapp.com/users`, values)
         .then( res => {
             alert(` Olá ${res.data.name} seus dados foram cadastrados ID:${res.data.id}`)
             window.location.href=("/login")
