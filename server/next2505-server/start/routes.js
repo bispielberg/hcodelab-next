@@ -7,8 +7,12 @@ Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
 
+Route.get('/users/:id/photo','UserController.photo')
 Route.post('/auths','AuthController.store')
 Route.post('/users','UserController.store')
+Route.post('/contact','ContactController.store')
+
+Route.get('/me','AuthController.me').middleware(['auth'])
 
 /*
 Route.get('/admin/users', 'UserController.index')
@@ -19,9 +23,11 @@ JWT - Json Web Token
 */
 
 Route.group(()=>{
-  Route.resource('users','UserController').apiOnly()
-}).prefix('admin').middleware(['auth'])
 
-Route.group(()=>{
-  Route.resource('products','ProductController').apiOnly()
+  Route.resource('users','UserController').apiOnly()
+  Route.resource('contacts','ContactController').apiOnly()
+  Route.resource('users','UserController').apiOnly()
+  Route.put('users/:id/password','UserController.changePassword')
+  Route.put('users/:id/photo', 'UserController.changePhoto')
+
 }).prefix('admin').middleware(['auth'])

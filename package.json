@@ -9,22 +9,23 @@
     "start": "next start"
   },
   "keywords": [
-    "hcodelab",
-    "next",
-    "js",
+    "hcode",
     "javascript",
-    "html5",
-    "css"
+    "react",
+    "nextjs",
+    "nodejs",
+    "adonisjs"
   ],
-  "author": "Gabriel Bispo",
+  "author": "Glaucio Daniel",
   "license": "MIT",
   "devDependencies": {
-    "next": "^9.4.4",
+    "next": "^9.4.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "mysql": "^2.18.1",
     "react-cookie": "^4.0.3"
   }
 }
