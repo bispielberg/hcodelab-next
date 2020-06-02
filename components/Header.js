@@ -36,7 +36,7 @@ export default function Header(){
                         <path id="Caminho_216" data-name="Caminho 216" d="M3,18H29V16H3Zm0-5H29V11H3ZM3,6V8H29V6Z" transform="translate(0 4)"/>
                     </svg>
                 </button>
-                <button type="button" id={ styles['btn-close']} data-close="menu" onClick={handleClick}>
+                <button type="button" id={ styles['btn-close']} data-close="menu" onClick={handleClick} className={styles[open]}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <style jsx>{`
                                 #caminho {
